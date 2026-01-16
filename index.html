@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laboratorio de Programación - Bloque 1</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Laboratorio de Programación</h1>
+    <p>Bloque 1: Variables, constantes, tipos y operaciones</p>
+  </header>
+
+  <main class="layout">
+    <!-- Panel de controles -->
+    <section class="card">
+      <h2>Controles</h2>
+
+      <div class="buttons">
+        <button id="btnJsVars">▶ Ejecutar JS: Variables y operaciones</button>
+        <button id="btnClear">🧹 Limpiar salida</button>
+      </div>
+
+      <hr />
+
+      <p class="note">
+        * La salida aparece en el panel “Consola (Salida en pantalla)”.
+        También puedes abrir la consola del navegador (F12) para ver lo mismo.
+      </p>
+    </section>
+
+    <!-- Consola / salida -->
+    <section class="card">
+      <h2>Consola (Salida en pantalla)</h2>
+
+      <!-- “Hueco” donde inyectamos lo que ocurre -->
+      <div id="output" class="output" aria-live="polite"></div>
+
+      <div class="tiny-buttons">
+        <button id="btnCopy">📋 Copiar salida</button>
+      </div>
+    </section>
+
+    <!-- Reservado para Python (más adelante con Flask) -->
+    <section class="card">
+      <h2>Python (próxima práctica)</h2>
+      <p class="note">
+        Aquí mostraremos la salida de Python cuando conectemos Flask (backend).
+        De momento, este bloque queda preparado.
+      </p>
+
+      <div id="pyOutput" class="output output--muted">
+        (Aún no conectado)
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Curso POO y BBDD — Manual práctico en vivo</small>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/ui.js"></script>
+  <script src="js/01_variables.js"></script>
+</body>
+</html>
