@@ -1,13 +1,30 @@
-const outputE1 = document.getElementById("output");
-console.log("Este es el valor de outputE1: ", outputE1);
-console.log("Este es el valor de outputE1: ", outputE1.textContent);
+const outputEl = document.getElementById("output");
 
-function printTitle(text=""){
-  outputE1.textContent += text + "\n"; 
-};
+function printLine(text = "") {
+  // Añade una línea al panel de salida
+  outputEl.textContent += text + "\n";
+}
 
-printTitle();
+function printTitle(title) {
+  // Un “título” visual separador
+  printLine("========================================");
+  printLine(title);
+  printLine("========================================");
+}
 
-console.log("Este es el nuevo valor de output1: ", outputE1);
+function clearOutput() {
+  outputEl.textContent = "";
+}
 
-/*Método DOM*/
+// Botón limpiar
+document.getElementById("btnClear").addEventListener("click", clearOutput);
+
+// Botón copiar salida
+document.getElementById("btnCopy").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(outputEl.textContent);
+    alert("Salida copiada al portapapeles.");
+  } catch {
+    alert("No se pudo copiar (permiso del navegador).");
+  }
+});
