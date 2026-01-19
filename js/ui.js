@@ -20,6 +20,17 @@ function clearOutput() {
   outputEl.textContent = "";
 }
 
+
+
+
+function changeName(nuevoNombre=("Mi Práctica Poo")) {
+    document.title = nuevoNombre;
+}
+
+
+
+
+
 function breakline() {
   let break_line = "\n";
   printLine (break_line);
@@ -28,6 +39,21 @@ function breakline() {
 
 // Botón limpiar
 document.getElementById("btnClear").addEventListener("click", clearOutput);
+
+
+
+
+
+// Creo un Botón para renombrar la pestaña
+document.getElementById("btnRename").addEventListener
+("click", () => {changeName(); 
+});
+
+
+
+
+
+
 
 // Botón copiar salida
 document.getElementById("btnCopy").addEventListener("click", async () => { 

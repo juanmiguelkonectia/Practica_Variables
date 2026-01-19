@@ -45,7 +45,7 @@ document.getElementById("btnJsVars").addEventListener("click", () =>{
 // por general esto es la instrucion para cuando se pulsa con el raton en un boton
 // () =>¨{}  paraentesis para parámetros y llaves para instrucciones, aqui creamos una funcion, () sin nombre, que tiene una funcion {} que es lo contenido aquí*/
 
-  printTitle("2) Operaciones básicas");
+  /*printTitle("2) Operaciones básicas");
   breakline();
 
   let a = 23;
@@ -95,5 +95,49 @@ a += b;
 
 b -= c;
 printLine (`Nuevo valor de b después de restar con c = ${b}`);
+console.log(a,b,c);*/
+
+//Genera el codigo necesario para las siguientes operaciones:
+//Crea una constante y dale el nombre de un producto
+//Crea una variable para el precio de ese producto
+//Crea una linea ddonde se muestre el nombre, el precio y el precio con IVA (21%)
+
+printTitle("1) Ejercicio 1");
+breakline();
+
+const producto = "Ordenador"
+let precioProducto = 820
+printLine (`Tengo un ordenador cuyo precio es: ${precioProducto} y su precio con IVA es: ${precioProducto * 1.21}`)
+
+breakline();
+printTitle("1) Ejercicio 1 Redondeando");
+breakline();
+printLine(`Tengo un ordenador cuyo precio es: ${precioProducto} y su precio con IVA es: ${(precioProducto * 1.21).toFixed(2)}`)
+
+
+
+
+//Crea una linea donde ponga el nombre de una variable de tipo numérico y justo después ++
+//ejemplo: a++
+//Muestra en una linea si el valor de la variable ha cambiado
+//Cuando la operación funciona que es lo que realiza? Muiestralo en una linea o comentario
+
+
+breakline();
+printTitle("2) Ejercicio 2");
+breakline();
+
+let miVariable = 25;
+let textoMiVariable = String(miVariable);
+printLine(`Mi variable (que es el número 25) ha de transformarse en string (una cadena de texto) para poder concadenarse a otra cadena(++); el resultado por tanto es:  ${textoMiVariable}++`);
+
+
+
+//Mega extra: Crea un botón que cambie el título de la pestaña por MI PRACTICA POO.
+
+breakline();
+printTitle("3) Ejercicio 3");
+breakline();
+
 
 });
