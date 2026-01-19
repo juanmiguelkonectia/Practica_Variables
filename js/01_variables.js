@@ -1,22 +1,99 @@
-let nombre ; /*declaro una variable llamana nombre de contenido null o vacio*/
-nombre = "Juanmi"; /* Inicializo la variable y asigno el valor "Juanmi" a la variable name*/
+// damos funcionalidad al boton
 
-let apellido="García"; /*declaro y asigno el valor "García" a la variable apellido*/
+// btnJsVars
 
-let dinero=false; /*declaro y asigno el valor booleano false a la variable dinero*/
+document.getElementById("btnJsVars").addEventListener("click", () =>{
 
-let nombre_completo= "Curro Jiménez"; /*declaro y asigno el valor "Curro Jiménez" a la variable nombre_completo*/
+  clearOutput(); 
+  console.log("El botón es funcional"); // para probar el boton
+  //esta funcion esta definida en el otro js que el html lee antes que este
+  let nombre= "Juan Miguel"; //declaracion e inicialización de cada variable
+  let edad= 59;
+  let alumno= true;
 
-const gravedad = 9.81; /*declaro y asigno el valor 9.81 a la constante gravedad*/
+  const nacionalidad = "España";
 
-/*Var es otra forma de asignar variables pero esta en desuso y no se recomienda su uso*/
+  /*printTitle("1) Aprendiendo variables, funciones y metodo DOM");
+  // DOM Document Objet Model
+  breakline(); //- mejor poner el break en printTitle
 
-var surname = "López"; /*declaro y asigno el valor "López" a la variable surname*/
 
-nombre = "Pedro"; /*reasigno el valor "Pedro" a la variable nombre*/
+  printLine("Mi nombre es " + nombre);
+  printLine("Mi edad es de " + edad + " años");
+  printLine("Soy de " + nacionalidad);
+  breakline();
 
-/*gravedad = 10; /*esto generará un error porque las constantes no pueden ser reasignadas*/
+  printTitle("1.1) Ver tipo de datos");
+  breakline();
 
-nombre_completo=nombre + " " + apellido;
+  printLine("La variable Nombre guarda un " + typeof nombre)
+  printLine("La variable Edad guarda un " + typeof edad)
+  printLine("La variable Alumno guarda un " + typeof alumno)
+  printLine("La constante Nacionalidad guarda un " + typeof nacionalidad)
+  breakline();
 
-console.log(nombre_completo); /*imprimo en consola el valor de la variable nombre_completo*/
+
+  printTitle("1.2) Llamar a variables dentro de un String");
+  breakline();
+
+  // esta forma de concadenacion es la más recomendada:
+  printLine(`Mi nombre es ${nombre}.`);
+  printLine(`Mi edad es de ${edad} años.`);
+  printLine(`Soy de ${nacionalidad}.`);
+  breakline();
+
+// por general esto es la instrucion para cuando se pulsa con el raton en un boton
+// () =>¨{}  paraentesis para parámetros y llaves para instrucciones, aqui creamos una funcion, () sin nombre, que tiene una funcion {} que es lo contenido aquí*/
+
+  printTitle("2) Operaciones básicas");
+  breakline();
+
+  let a = 23;
+  let b = 65;
+
+  console.log (a, " ", b);
+
+  printLine(`variable a = ${a}`);
+  printLine(`variable b = ${b}`);
+  printLine("operadores: +. -, *, /, %, ")  //no resta sino diferencia, % es resto
+
+  printLine(`La suma (+) es igual a ${a + b}`)
+  printLine(`La diferencia (-) es igual a ${a - b}`)
+  printLine(`El producto (*) es igual a ${a * b}`)
+  printLine(`La división (a / b) es igual a ${a / b}`)
+  printLine(`La división (b / a) es igual a ${b / a}`)
+  printLine(`El resto (%) de la división a/b es igual a ${a % b}`)
+  printLine(`El resto (%) de la división a/b es igual a ${b % a}`)
+
+
+  breakline();
+  printTitle("3) Operaciones básicas y cambios de de valor de una variable");
+  breakline();
+
+  let c;
+
+  c = a + b;
+  printLine(`La suma (+) es igual a ${c}`), c = a - b;
+  printLine(`La diferencia (-) es igual a ${c}`), c = a * b;
+  printLine(`El producto (*) es igual a ${c}`), c = a / b;
+  printLine(`La división (a / b) es igual a ${c}`), c = b / a;
+  printLine(`La división (b / a) es igual a ${c}`), c = a % b;
+  printLine(`El resto (%) de la división a/b es igual a ${c}`), c = b % a;
+  printLine(`El resto (%) de la división b/a es igual a ${c}`);
+
+
+  breakline();
+  printTitle("3.2) Operador de asignación compuesta");
+  breakline();
+
+
+// se realiza una operacion y se le asigna valor nuevo a una variable en el mismo comando
+  //a = a  + b;
+
+a += b;
+  printLine (`Suma de a + b = ${a}`);
+
+b -= c;
+printLine (`Nuevo valor de b después de restar con c = ${b}`);
+
+});
