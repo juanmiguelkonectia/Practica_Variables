@@ -1,143 +1,140 @@
-// damos funcionalidad al boton
+//Damos funcionalidad al boton.
 
 // btnJsVars
 
 document.getElementById("btnJsVars").addEventListener("click", () =>{
-
-  clearOutput(); 
-  console.log("El botón es funcional"); // para probar el boton
+    clearOutput();
+    //console.log("Botón es funcional!") //Con esto comprobamos que el boton es funcional.
+    // para probar el boton
   //esta funcion esta definida en el otro js que el html lee antes que este
-  let nombre= "Juan Miguel"; //declaracion e inicialización de cada variable
-  let edad= 59;
-  let alumno= true;
+    let nombre = "Rubén" //declaracion e inicialización de cada variable
+    let edad = 42;
+    let alumno = true;
 
-  const nacionalidad = "España";
+    const nacionalidad = "España";
 
-  /*printTitle("1) Aprendiendo variables, funciones y metodo DOM");
-  // DOM Document Objet Model
-  breakline(); //- mejor poner el break en printTitle
+    /*printTitle(" 1) Aprendiendo variables, funciones y metodo DOM");
+    breakLine();
 
+    printLine("Mi nombre es " + nombre );
+    printLine("Mi edad es de " + edad + " años");
+    printLine ("Soy de "+ nacionalidad);
 
-  printLine("Mi nombre es " + nombre);
-  printLine("Mi edad es de " + edad + " años");
-  printLine("Soy de " + nacionalidad);
-  breakline();
+    breakLine();
+    printTitle(" 1.1) Ver tipos de datos");
+    breakLine();
 
-  printTitle("1.1) Ver tipo de datos");
-  breakline();
+    printLine("La variable nombre guarda " + typeof nombre );
+    printLine("La variable edad guarda " + typeof edad );
+    printLine("La variable alumno guarda " + typeof alumno );
+    printLine("La constante nacionalidad guarda " + typeof nacionalidad );
 
-  printLine("La variable Nombre guarda un " + typeof nombre)
-  printLine("La variable Edad guarda un " + typeof edad)
-  printLine("La variable Alumno guarda un " + typeof alumno)
-  printLine("La constante Nacionalidad guarda un " + typeof nacionalidad)
-  breakline();
+    breakLine();
+    printTitle(" 1.2) Llamar a variables dentro de un STRING");
+    breakLine();
 
+    printLine(`Mi nombre es ${nombre}.` );
+    printLine(`Mi edad es de ${edad} años.`);
+    printLine (`Soy de ${nacionalidad}.`);
 
-  printTitle("1.2) Llamar a variables dentro de un String");
-  breakline();
+    printLine(`${edad}`)
 
-  // esta forma de concadenacion es la más recomendada:
-  printLine(`Mi nombre es ${nombre}.`);
-  printLine(`Mi edad es de ${edad} años.`);
-  printLine(`Soy de ${nacionalidad}.`);
-  breakline();
+    breakLine();
+    */
+    printTitle(" 2) Operaciones basicas");
+    breakLine();
 
-// por general esto es la instrucion para cuando se pulsa con el raton en un boton
-// () =>¨{}  paraentesis para parámetros y llaves para instrucciones, aqui creamos una funcion, () sin nombre, que tiene una funcion {} que es lo contenido aquí*/
+    let a = 23;
+    let b = 65;
 
-  /*printTitle("2) Operaciones básicas");
-  breakline();
+    console.log(a, " ", b);
+    printLine(`variable a = ${a}`);
+    printLine(`variable b = ${b}`);
+    printLine("operadores : + , - , * , / , %")
 
-  let a = 23;
-  let b = 65;
+    //Cread una linea para cada operación de a vs b. Suerte!!! 
+    printLine(`Suma de a + b = ${a + b}`);
+    printLine(`Diferencia de a - b = ${a - b}`);
+    printLine(`Producto de a * b = ${a * b}`);
+    printLine(`División de a / b = ${a / b}`);
+    printLine(`División de b / a = ${b / a}`);
+    printLine(`Resto de a % b = ${a % b}`);
+    printLine(`Suma de b % a = ${b % a}`);
 
-  console.log (a, " ", b);
+    breakLine();
+    printTitle(" 3.1) Operaciones basicas y cambios de valor para una variable");
+    breakLine();
 
-  printLine(`variable a = ${a}`);
-  printLine(`variable b = ${b}`);
-  printLine("operadores: +. -, *, /, %, ")  //no resta sino diferencia, % es resto
+    let c;
 
-  printLine(`La suma (+) es igual a ${a + b}`)
-  printLine(`La diferencia (-) es igual a ${a - b}`)
-  printLine(`El producto (*) es igual a ${a * b}`)
-  printLine(`La división (a / b) es igual a ${a / b}`)
-  printLine(`La división (b / a) es igual a ${b / a}`)
-  printLine(`El resto (%) de la división a/b es igual a ${a % b}`)
-  printLine(`El resto (%) de la división a/b es igual a ${b % a}`)
+    c = a + b;
+    printLine(`Suma de a + b = ${c}`);
+    c = a - b;
+    printLine(`Diferencia de a - b = ${c}`);
+    c = a * b;
+    printLine(`Producto de a * b = ${c}`);
+    c = a / b;
+    printLine(`División de a / b = ${c}`);
+    c = b / a;
+    printLine(`División de b / a = ${c}`);
+    c = a % b;
+    printLine(`Resto de a % b = ${c}`);
+    c = b % a;
+    printLine(`Suma de b % a = ${c}`);
+    breakLine();
+    printTitle(" 3.2) Operador de asignación compuesta ");
+    breakLine();
+    
 
+    //Se realiza una operación y se le asigna valor nuevo a una variable en el mismo comando.
 
-  breakline();
-  printTitle("3) Operaciones básicas y cambios de de valor de una variable");
-  breakline();
+    //a = a + b;
+    a += b;
+    printLine(`Suma de a + b = ${a}`);
 
-  let c;
-
-  c = a + b;
-  printLine(`La suma (+) es igual a ${c}`), c = a - b;
-  printLine(`La diferencia (-) es igual a ${c}`), c = a * b;
-  printLine(`El producto (*) es igual a ${c}`), c = a / b;
-  printLine(`La división (a / b) es igual a ${c}`), c = b / a;
-  printLine(`La división (b / a) es igual a ${c}`), c = a % b;
-  printLine(`El resto (%) de la división a/b es igual a ${c}`), c = b % a;
-  printLine(`El resto (%) de la división b/a es igual a ${c}`);
-
-
-  breakline();
-  printTitle("3.2) Operador de asignación compuesta");
-  breakline();
-
-
-// se realiza una operacion y se le asigna valor nuevo a una variable en el mismo comando
-  //a = a  + b;
-
-a += b;
-  printLine (`Suma de a + b = ${a}`);
-
-b -= c;
-printLine (`Nuevo valor de b después de restar con c = ${b}`);
-console.log(a,b,c);*/
-
-//Genera el codigo necesario para las siguientes operaciones:
-//Crea una constante y dale el nombre de un producto
-//Crea una variable para el precio de ese producto
-//Crea una linea ddonde se muestre el nombre, el precio y el precio con IVA (21%)
-
-printTitle("1) Ejercicio 1");
-breakline();
-
-const producto = "Ordenador"
-let precioProducto = 820
-printLine (`Tengo un ordenador cuyo precio es: ${precioProducto} y su precio con IVA es: ${precioProducto * 1.21}`)
-
-breakline();
-printTitle("1) Ejercicio 1 Redondeando");
-breakline();
-printLine(`Tengo un ordenador cuyo precio es: ${precioProducto} y su precio con IVA es: ${(precioProducto * 1.21).toFixed(2)}`)
+    b -= c;
+    printLine(`Nuevo valor de b despues de restar con c = ${b}`);
+    printLine(`Nuevo valor de nacionalidad ${nacionalidad}`);
+    console.log(a , b , c);
 
 
+    //Genera el codigo necesario para las siguientes operaciones:
+    //Crea una constante y dale el nombre de un producto,
+    //Crea una variable para el precio de ese producto
+    //Crea una linea donde se muestre el nombre, el precio y el precio con IVA (21%)
+
+    //Crea una linea donde ponga el nombre de una varible de tipo numérica y justo despues ++
+    //ejemplo: a++
+    //Muestra en una linea si el valor de la variable ha cambiado.
+    //Cuando la operación funciona que es lo que realiza? Muestralo en una linea o comentario.
+
+    //Mega Extra: Crea un Boton que cambie el titulo de la pestaña por MI PRACTICA POO.
 
 
-//Crea una linea donde ponga el nombre de una variable de tipo numérico y justo después ++
-//ejemplo: a++
-//Muestra en una linea si el valor de la variable ha cambiado
-//Cuando la operación funciona que es lo que realiza? Muiestralo en una linea o comentario
+    breakLine();
+    printTitle(" 4) Ejercicios.");
+    breakLine();
+    let product = "Pomelos";
+    let price = 3.45;
+    let tax = 0.21;
+    printLine("Ejercicio 1")
+    printLine(`Los ${product} tienen un precio de ${price}€/kg. Con impuestos finalmente un precio final de ${price + price*tax}€/kg`)
+    breakLine();
+    printLine("Ejercicio 2")
 
-
-breakline();
-printTitle("2) Ejercicio 2");
-breakline();
-
-let miVariable = 25;
-let textoMiVariable = String(miVariable);
-printLine(`Mi variable (que es el número 25) ha de transformarse en string (una cadena de texto) para poder concadenarse a otra cadena(++); el resultado por tanto es:  ${textoMiVariable}++`);
+    let d = 5;
+    printLine(`El valor de "d" es ${d}`);
+    d++ // suma una unidad a la variable  d+= 2 sumaria de 2 en 2 
+    printLine(`El valor de "d" depues de operar con "d++" es de ${d}`)
+    printLine(`La instrucción ++ añade o suma 1`)
 
 
 
-//Mega extra: Crea un botón que cambie el título de la pestaña por MI PRACTICA POO.
 
-breakline();
-printTitle("3) Ejercicio 3");
-breakline();
+
 
 
 });
+
+
+

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title id="titleid">Laboratorio de Programación - Bloque 1</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>Laboratorio de Programación - Bloque 1</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="header">
@@ -17,10 +17,13 @@
     <section class="card">
       <h2>Controles</h2>
 
+
+
+      <!-- añado un boton para renombrar la pestaña -->
       <div class="buttons">
         <button id="btnJsVars">▶ Ejecutar JS: Variables y operaciones</button>
         <button id="btnClear">🧹 Limpiar salida</button>
-        <button id="btnRename">Renombra pestaña</button>
+        <button id="btnRename">🔄 Renombrar pestaña</button>
       </div>
 
       <hr />
@@ -30,9 +33,6 @@
         También puedes abrir la consola del navegador (F12) para ver lo mismo.
       </p>
     </section>
-    
-
-
 
     <!-- Consola / salida -->
     <section class="card">
@@ -45,29 +45,6 @@
         <button id="btnCopy">📋 Copiar salida</button>
       </div>
     </section>
-    
-
-    <section>
-    <h3>Práctica 2: Datos de entrada</h3>
-
-    <label class="label" for="inpEdad">Edad</label>
-    <input id="inpEdad" class="input" type="number" placeholder="Ej: 17" />
-
-    <label class="label" for="inpNota">Nota (0 a 10)</label>
-    <input id="inpNota" class="input" type="number" step="0.1" placeholder="Ej: 7.5" />
-
-    <label class="label" for="inpRol">Rol</label>
-    <select id="inpRol" class="input">
-      <option value="">-- Selecciona --</option>
-      <option value="Alumno">Alumno</option>
-      <option value="Profesor">Profesor</option>
-      <option value="Admin">Admin</option>
-    </select>
-    </section>
-
-  <div class="buttons" style="margin-top: 12px;">
-    <button id="btnJsIfElse">▶ Ejecutar JS: Condicionales</button>
-  </div>
 
     <!-- Reservado para Python (más adelante con Flask) -->
     <section class="card">

@@ -1,66 +1,41 @@
 const outputEl = document.getElementById("output");
 
-function printLine(text = "") { //crea la función a la par que la variable
+function printLine(text = "") {
   // Añade una línea al panel de salida
-  outputEl.textContent += text + "\n"; 
-  //outputEl.textContent = outputEl + text + "\n"
-  //+= es añadir, \n es un salto de linea
+  outputEl.textContent += text + "\n"; // outputEl.textContent = outputEl.textContent + text + "\n";
 }
 
-function printTitle(title) { //esta variable title se declara pero no se inicializa de momento
+function printTitle(title) {
   // Un “título” visual separador
-  //printLine ("\n");
-  printLine("================================================");
+  printLine("========================================");
   printLine(title);
-  printLine("================================================");
-  //printLine ("\n");
+  printLine("========================================");
 }
 
 function clearOutput() {
   outputEl.textContent = "";
 }
 
-
-
-
-function changeName(nuevoNombre=("Mi Práctica Poo")) {
-    document.title = nuevoNombre;
-}
-
-
-
-
-
-function breakline() {
+function breakLine(){
   let break_line = "\n";
-  printLine (break_line);
-  //outputEl.textContent = "\n"; <- asi no por lo visto
-}
+  printLine(break_line);
+};
 
 // Botón limpiar
 document.getElementById("btnClear").addEventListener("click", clearOutput);
 
-
-
-
-
-// Creo un Botón para renombrar la pestaña
-document.getElementById("btnRename").addEventListener
-("click", () => {changeName(); 
-});
-
-
-
-
-
-
-
 // Botón copiar salida
-document.getElementById("btnCopy").addEventListener("click", async () => { 
+document.getElementById("btnCopy").addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(outputEl.textContent);
     alert("Salida copiada al portapapeles.");
   } catch {
     alert("No se pudo copiar (permiso del navegador).");
-  } // async es una función asincrónica al ejecutar intenta espera al navegador si funciona pon el mensaje sali... y si no coje el segundo mensaje
+  }
 });
+
+const pestaña_title = document.getElementById("titleid");
+function renamePestaña(){
+  pestaña_title.textContent = "MI PRACTICA POO";
+}
+document.getElementById("btnRename").addEventListener("click", renamePestaña);
